@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+      .div_base{
+        width: 400px;
+        height: 400px;
+        background-color: #ffffff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        }
+        
+        h2{
+        	width: 250px;
+        }
+        .span_err{
+        	font-size:10px;
+        	color: red;
+        }
+        
+        .a_user{
+        	font-size:10px;
+        }

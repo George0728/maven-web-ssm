@@ -47,7 +47,7 @@
         <dependency>    
             <groupId>javax</groupId>    
             <artifactId>javaee-api</artifactId>    
-            <version>7.0</version> 
+            <version>8.0</version> 
             <scope>provided</scope>   
         </dependency>    
         <!-- spring框架包 start -->    
@@ -160,7 +160,12 @@
         </dependency>    
         <!-- log END -->    
         <!-- Json  -->    
-        <!-- 格式化对象，方便输出日志 -->    
+        <!-- 格式化对象，方便输出日志 -->
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>0.9</version>
+		</dependency>    
         <dependency>    
             <groupId>com.alibaba</groupId>    
             <artifactId>fastjson</artifactId>    

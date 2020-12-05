@@ -11,7 +11,8 @@ id:${user.id};<br/>
 userName:${user.userName};<br/>
 password:${user.password};<br/>
 age:${user.age};<br/>
-user:${user};
+user:${user};<br/>
+userList:${userList}
 
 </body>
 </html>

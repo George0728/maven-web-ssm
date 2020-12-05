@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+<script src="https://lib.baomitu.com/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+ //展示数据
+ function showData(data) {
+         var str = "";//定义用于拼接的字符串
+         for (var i = 0; i < data.length; i++) {
+             //拼接表格的行和列
+            str = "<tr><td>" + data[i].id + "</td><td>" + data[i].userName + "</td><td>" +
+            				   data[i].password + "</td><td>" + data[i].age + "</td></tr>";
+             //追加到table中
+             $("#tab").append(str);         }
+     }
+
+
+ $(document).ready(function requestData(){
+    $.ajax({
+        url: "../getAllUserTable",
+        type: "get",
+        dataType: "json",
+        success: function(data){
+            /*这个方法里是ajax发送请求成功之后执行的代码*/
+            showData(data);//我们仅做数据展示
+        },
+        error: function(msg){
+            alert("ajax连接异常："+msg);
+        }
+    });
+});
+</script>
+</head>
+<body>
+	<table id="tab" border="1" >
+	<tr bgcolor="00ff00">
+		<th>id</th>
+		<th>姓名</th>
+		<th>密码</th>
+		<th>年龄</th>
+	</tr>
+
+
+</table>
+</body>
+</html>
